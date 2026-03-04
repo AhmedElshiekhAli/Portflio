@@ -47,3 +47,18 @@
       a.style.color = a.getAttribute('href') === '#' + current ? 'var(--orange)' : '';
     });
   });
+// loader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        const content = document.getElementById('content');
+
+        loader.classList.add('hide');
+
+        setTimeout(() => {
+          loader.style.display = 'none';
+          content.style.display = 'block';
+        }, 600); 
+
+      }, 3000); 
+    });
